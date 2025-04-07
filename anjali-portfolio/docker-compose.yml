@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  anjali-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anjali-portfolio
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # If you want to persist any data (uncomment and modify as needed)
+    # volumes:
+    #   - ./data:/app/data
